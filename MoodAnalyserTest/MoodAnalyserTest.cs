@@ -18,6 +18,7 @@ namespace MoodAnalyserTest
             {
                 Assert.AreEqual(MoodAnalysisException.ExceptionType.ENTERED_NULL, e.type);
             }
+
         }
 
         [Test]

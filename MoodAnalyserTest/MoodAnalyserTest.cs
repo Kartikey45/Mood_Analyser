@@ -9,7 +9,7 @@ namespace MoodAnalyserTest
         [Test]
         public void Test1()
         {
-            MoodAnalyser moodAnalyser = new MoodAnalyser(null);
+            MoodAnalyser moodAnalyser = new MoodAnalyser();
             try
             {
                 moodAnalyser.analyzeMood(null);
@@ -17,6 +17,20 @@ namespace MoodAnalyserTest
             catch (MoodAnalysisException e)
             {
                 Assert.AreEqual(MoodAnalysisException.ExceptionType.ENTERED_NULL, e.type);
+            }
+        }
+
+        [Test]
+        public void Test2()
+        {
+            MoodAnalyser moodAnalyser = new MoodAnalyser();
+            try
+            {
+                moodAnalyser.analyzeMood("");
+            }
+            catch (MoodAnalysisException e)
+            {
+                Assert.AreEqual(MoodAnalysisException.ExceptionType.ENTERED_EMPTY, e.type);
             }
         }
     }

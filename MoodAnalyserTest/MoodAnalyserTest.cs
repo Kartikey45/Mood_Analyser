@@ -7,19 +7,11 @@ namespace MoodAnalyserTest
     public class Tests
     {
         [Test]
-        public void Test()
+        public void Test1()
         {
-            MoodAnalyser moodanalyser = new MoodAnalyser();
-            string value = moodanalyser.analyseMood("i am sad");
-            Assert.AreEqual(value,"SAD");
-        }
-
-        [Test]
-        public void Test2()
-        {
-            MoodAnalyser moodanalyser = new MoodAnalyser();
-            string value = moodanalyser.analyseMood("i am in any mood");
-            Assert.AreEqual(value, "HAPPY");
+            MoodAnalyser mood = new MoodAnalyser("I am in sad mood");
+            string value = mood.analyseMood();
+            Assert.AreEqual("sad", value);
         }
     }
 }

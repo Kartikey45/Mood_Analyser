@@ -19,26 +19,32 @@ namespace Mood_Analyser_Problem
             this.message = message;
         }
 
-        //METHOD TO CHECK THE MOOD
+        //METHOD TO CHECK THE CONDITIONS
         public string analyseMood()
         {
-            if (message.Contains("sad"))
+            try
             {
-                message = "sad";
+                if (message.Contains("sad"))
+                {
+                    return "sad";
+                }
+                else
+                {
+                    return "happy";
+                }
             }
-            else
+            catch (NullReferenceException e)
             {
-                message = "happy";
+                Console.WriteLine(e);
+                return "happy";
             }
-            return message;
         }
 
         //MAIN METHOD
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Mood Analyser.");
             Console.ReadKey();
         }
-
     }
 }

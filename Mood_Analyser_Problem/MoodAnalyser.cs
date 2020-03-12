@@ -2,9 +2,23 @@
 
 namespace Mood_Analyser_Problem
 {
-    class MoodAnalyser
+    public class MoodAnalyser
     {
-        static void Main(string[] args)
+        String message;
+
+        public String analyseMood(String message)
+        {
+            if (message.Contains("sad"))
+            {
+                return "SAD";
+            }
+            else 
+            {
+                return "HAPPY";       
+            }
+        }
+
+        public static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Mood Analyser");
             Console.ReadKey();

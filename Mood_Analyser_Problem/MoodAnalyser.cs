@@ -4,24 +4,41 @@ namespace Mood_Analyser_Problem
 {
     public class MoodAnalyser
     {
+        //VARIABLE INITIALIZE
         String message;
 
-        public String analyseMood(String message)
+        //NON-PARAMETERISED CONSTRUCTOR
+        public MoodAnalyser()
+        {
+            
+        }
+
+        //PARAMETERISED CONSTRUCTOR
+        public MoodAnalyser(String message)
+        {
+            this.message = message;
+        }
+
+        //METHOD TO CHECK THE MOOD
+        public string analyseMood()
         {
             if (message.Contains("sad"))
             {
-                return "SAD";
+                message = "sad";
             }
-            else 
+            else
             {
-                return "HAPPY";       
+                message = "happy";
             }
+            return message;
         }
 
-        public static void Main(string[] args)
+        //MAIN METHOD
+        static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Mood Analyser");
+            Console.WriteLine("Welcome to Mood Analyser.");
             Console.ReadKey();
         }
+
     }
 }

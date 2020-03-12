@@ -5,7 +5,7 @@ using Mood_Analyser_Problem;
 
 namespace Mood_Analyser_Problem
 {
-    class MoodAnalysisException : Exception
+    public class MoodAnalysisException : Exception
     {
         public enum ExceptionType
         {

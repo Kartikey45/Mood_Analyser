@@ -2,15 +2,22 @@ using NUnit.Framework;
 using Mood_Analyser_Problem;
 
 namespace MoodAnalyserTest
-{   
+{
+    [TestFixture]
     public class Tests
     {
         [Test]
         public void Test1()
         {
-            MoodAnalyser mood = new MoodAnalyser(null);
-            string value = mood.analyseMood();
-            Assert.AreEqual("happy", value);
+            MoodAnalyser moodAnalyser = new MoodAnalyser(null);
+            try
+            {
+                moodAnalyser.analyzeMood(null);
+            }
+            catch (MoodAnalysisException e)
+            {
+                Assert.AreEqual(MoodAnalysisException.ExceptionType.ENTERED_NULL, e.type);
+            }
         }
     }
 }

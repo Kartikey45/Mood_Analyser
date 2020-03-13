@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Maximum_Problems_Using_Generic
 {
@@ -45,6 +46,20 @@ namespace Maximum_Problems_Using_Generic
             }
             return maximumNumber;
         }
+
+        //METHOD FOR FINDING MAXIMUM STRING
+        public int maximumElement1(string element1, string element2, string element3)
+        {
+            int string1 = element1.Length;
+            int string2 = element2.Length;
+            int string3 = element3.Length;
+            int[] stringElement = { string1, string2, string3 };
+
+            //Find The Maximum Number In Array
+            int MaximumValue1 = stringElement.Max();
+            return MaximumValue1;
+        }
+
 
         //MAIN METHOD
         public static void Main(string[] args)

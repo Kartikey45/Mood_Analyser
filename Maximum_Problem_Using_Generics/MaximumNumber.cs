@@ -2,30 +2,33 @@
 
 namespace Maximum_Problem_Using_Generics
 {
-    public class Maximum_number
+    public class MaximumNumber
     {
         //MAIN METHOD
-        public static void Main(string[] args)
+        public int MaximumElement(int number1, int number2, int number3)
         {
             //ARRAY DECALRE
-            int[] integer = { 56, 32, 87 };
+            int[] integer = { number1, number2, number3 };
 
             //VARIABLE INITIALIZE
             int maximumInteger = 0;
             int arrayLength = integer.Length;
 
             //FIND MAXIMUM INTEGER
-            for (int index = 0 ; index < arrayLength ; index++)
+            for (int index = 0; index < arrayLength; index++)
             {
                 if (integer[index] > maximumInteger)
                 {
                     maximumInteger = integer[index];
                 }
             }
+            return maximumInteger;
+        }
 
-            //DISPLAY THE MAXIMUM INTEGER
+        //MAIN METHOD
+        public static void Main(string[] args)
+        {
             Console.WriteLine("Welcome to Generics");
-            Console.WriteLine("Maximum integer is : " + maximumInteger);
             Console.ReadKey();
         }
     }

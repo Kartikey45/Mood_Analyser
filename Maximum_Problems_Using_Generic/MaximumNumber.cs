@@ -2,7 +2,7 @@
 
 namespace Maximum_Problems_Using_Generic
 {
-    class Program
+    class MaximumNumber
     {
         static void Main(string[] args)
         {

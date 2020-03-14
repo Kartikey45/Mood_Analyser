@@ -25,7 +25,7 @@ namespace MaximumNumberTest
         public void Test3()
         {
             MaximumNumber maximum = new MaximumNumber();
-            int result = maximum.maximumElement1("kartikey", "anurag", "abhijeet");
+            int result = maximum.MaximumElement("kartikey".Length, "anurag".Length, "abhijit".Length);
             Assert.AreEqual(8, result);
         }
     }
